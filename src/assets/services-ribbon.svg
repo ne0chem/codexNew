@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" fill="none">
+<defs>
+ <linearGradient id="face" x1="600" y1="700" x2="1370" y2="200" gradientUnits="userSpaceOnUse"><stop stop-color="#0385CE" stop-opacity=".02"/><stop offset=".43" stop-color="#00172F" stop-opacity=".3"/><stop offset=".76" stop-color="#0385CE" stop-opacity=".26"/><stop offset=".94" stop-color="#58BAEE" stop-opacity=".46"/><stop offset="1" stop-color="#0385CE" stop-opacity=".12"/></linearGradient>
+ <linearGradient id="edge" x1="700" y1="790" x2="1370" y2="50" gradientUnits="userSpaceOnUse"><stop stop-color="#0385CE" stop-opacity="0"/><stop offset=".38" stop-color="#0385CE" stop-opacity=".7"/><stop offset=".7" stop-color="#7ACFFF"/><stop offset="1" stop-color="#0385CE" stop-opacity=".1"/></linearGradient>
+ <linearGradient id="fold" x1="1100" y1="0" x2="1570" y2="820" gradientUnits="userSpaceOnUse"><stop stop-color="#50BAF4" stop-opacity=".58"/><stop offset=".22" stop-color="#0385CE" stop-opacity=".28"/><stop offset=".55" stop-color="#00172F" stop-opacity=".02"/><stop offset="1" stop-color="#0385CE" stop-opacity=".18"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="22"/></filter>
+</defs>
+<path d="M400 750 C690 790 770 925 915 705 L1220 120 C1260 35 1285 20 1320 65" stroke="#0385CE" stroke-width="30" opacity=".18" filter="url(#glow)"/>
+<path d="M380 742 C650 775 745 855 850 678 L1160 110 C1202 32 1245 8 1290 38 L1395 120 C1345 90 1320 131 1285 209 L1020 815 C960 949 855 934 722 889 Z" fill="url(#face)"/>
+<path d="M380 742 C650 775 745 855 850 678 L1160 110 C1202 32 1245 8 1290 38" stroke="url(#edge)" stroke-width="1.2"/>
+<path d="M722 889 C855 934 960 949 1020 815 L1285 209 C1320 131 1345 90 1395 120" stroke="url(#edge)" stroke-width=".7" opacity=".55"/>
+<path d="M1290 38 C1356 67 1390 174 1430 298 L1660 1005 L1480 933 L1300 310 C1273 215 1249 115 1217 54 C1242 23 1265 21 1290 38Z" fill="url(#fold)"/>
+<path d="M1290 38 C1356 67 1390 174 1430 298 L1660 1005" stroke="url(#edge)" stroke-width="1.2"/>
+<path d="M400 750 L1510 1015" stroke="#0385CE" stroke-width="18" opacity=".15" filter="url(#glow)"/>
+</svg>

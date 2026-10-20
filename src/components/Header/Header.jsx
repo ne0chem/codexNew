@@ -1,0 +1,3 @@
+import { Link } from "react-router-dom";
+import "./Header.css";
+export default function Header(){return <header className="header"><div className="header__container"><Link to="/" className="header__logo" aria-label="CodexTech — главная"><img src="/assets/CodexTech.svg" alt="CodexTech"/></Link><nav className="header__nav" aria-label="Основная навигация">{[["home","Главная"],["services","Услуги"],["about","О компании"],["product","Наш продукт"],["contacts","Контакты"]].map(([id,label])=><a key={id} href={`/#${id}`}>{label}</a>)}</nav><a className="header__cta" href="/#contacts">Оставить заявку <span>↗</span></a></div></header>}

@@ -1,0 +1,1 @@
+.footer{background:#080d15;border-top:1px solid #ffffff15;padding:30px 5vw;display:flex;justify-content:space-between;align-items:center;gap:20px;color:#8795a8;font:12px Arial,sans-serif}.footer a{color:white;text-decoration:none;font-size:23px;font-weight:700}.footer a span{color:#0385ce}@media(max-width:600px){.footer{flex-wrap:wrap}.footer p{display:none}}

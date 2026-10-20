@@ -1,0 +1,12 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout__main {
+  flex: 1;
+}
+/* Page content follows the same outer alignment as the header. */
+.footer{padding-left:var(--page-gutter);padding-right:var(--page-gutter)}
+.projects__intro,.projects__process,.projects__contact{padding-left:var(--page-gutter);padding-right:var(--page-gutter)}

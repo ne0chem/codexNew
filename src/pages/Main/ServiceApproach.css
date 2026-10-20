@@ -1,0 +1,43 @@
+.approach{background:#aebfcbd9;color:#102d42;padding:110px 5.5vw 120px;font-family:Arial,Helvetica,sans-serif;position:relative;border-top:1px solid #dbeaf330;border-bottom:1px solid #24465d1a}.approach__layout{max-width:1500px;margin:0 auto;display:grid;grid-template-columns:.9fr 1.4fr;gap:7vw;align-items:start}.approach__intro{position:sticky;top:120px}.approach__eyebrow{display:flex;align-items:center;gap:12px;font-size:9px;letter-spacing:.17em;color:#355d77}.approach__eyebrow i{width:27px;height:1px;background:#0385ce}.approach h2{font-size:clamp(32px,3.2vw,52px);font-weight:400;line-height:1.14;letter-spacing:-.045em;margin:27px 0 28px}.approach h2 span{color:#006fae}.approach__intro>p{font-size:14px;line-height:1.85;color:#385469;max-width:410px;margin:0}.approach__intro>p+p{margin-top:16px}.approach__signature{display:flex;align-items:center;gap:13px;margin-top:44px;font-size:7px;letter-spacing:.12em;color:#526f83}.approach__signature>span:first-child{font-weight:600;color:#24465d;letter-spacing:.16em}.approach__signature i{width:30px;height:1px;background:#0385ce66}.approach__list{display:grid;grid-template-columns:1fr 1fr;column-gap:34px}.approach__item{position:relative;padding:27px 0 32px;border-top:1px solid #24465d30}.approach__item-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}.approach__number{font-size:10px;font-variant-numeric:tabular-nums;color:#527084;letter-spacing:.07em}.approach__item svg{width:29px;height:29px;color:#087ebc}.approach__item h3{font-size:18px;line-height:1.3;font-weight:500;letter-spacing:-.025em;margin:0 0 14px;color:#102d42}.approach__item>p{font-size:12px;line-height:1.85;color:#3a566b;max-width:360px;margin:0}.approach__item::before{content:'';position:absolute;top:-1px;left:0;width:28px;height:1px;background:#0385ce;transition:width .4s}.approach__item:hover::before{width:70px}.approach--animated [data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--reveal-delay,0ms)}.approach--animated [data-reveal].is-visible{opacity:1;transform:none}@media(max-width:1050px){.approach{padding-top:85px;padding-bottom:85px}.approach__layout{gap:40px;grid-template-columns:.85fr 1.2fr}.approach__list{column-gap:24px}.approach__item h3{font-size:16px}.approach__intro>p{font-size:13px}.approach__signature{flex-wrap:wrap;gap:10px}}@media(max-width:760px){.approach{padding:65px 6vw 55px}.approach__layout{grid-template-columns:1fr;gap:36px}.approach__intro{position:static}.approach h2{font-size:35px;margin:22px 0}.approach__intro>p{font-size:13px;max-width:550px}.approach__signature{display:none}.approach__list{column-gap:22px}.approach__item{padding:21px 0 25px}.approach__item-top{margin-bottom:17px}.approach__item h3{font-size:16px}.approach__item>p{font-size:11px;line-height:1.8}.approach__item svg{width:26px;height:26px}}@media(max-width:420px){.approach__list{grid-template-columns:1fr}.approach__item-top{float:left;flex-direction:column;gap:14px;margin:0 19px 0 0;min-width:30px}.approach__item h3{margin-left:49px}.approach__item>p{margin-left:49px}}@media(prefers-reduced-motion:reduce){.approach--animated [data-reveal]{opacity:1;transform:none;transition:none}.approach__item::before{transition:none}}
+/* Asymmetric bento surfaces, matching the hero's glass and titanium. */
+.approach{background:#687984;color:#f1f6fa;border-top:1px solid #dbeaf326;padding:90px 5.5vw 100px}
+.approach__layout{grid-template-columns:1fr;gap:42px}
+.approach__intro{position:static;display:grid;grid-template-columns:1.1fr 1fr;column-gap:8vw;align-items:start}
+.approach__eyebrow{grid-column:1/-1;color:#d0e1ec;margin-bottom:22px}
+.approach h2{grid-column:1;grid-row:2/4;margin:0;font-size:clamp(34px,3.1vw,51px);color:#f3f7fa}
+.approach h2 span{color:#8ac9ec}
+.approach__intro>p{grid-column:2;font-size:13px;line-height:1.8;color:#d4e0e9;max-width:560px}
+.approach__intro>p+p{margin-top:12px}
+.approach__signature{display:none}
+.approach__list{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
+.approach__item{padding:25px;min-width:0;border:1px solid #d9efff30;border-radius:16px;background:#b3ccdc16;box-shadow:inset 0 1px 0 #ffffff18,0 8px 25px #00172f0d;backdrop-filter:blur(18px) saturate(110%);-webkit-backdrop-filter:blur(18px) saturate(110%);overflow:hidden}
+.approach__item:nth-child(1){grid-column:span 2;background:#20394c52;padding:30px}
+.approach__item:nth-child(5){grid-column:span 2;background:#20394c52;padding:30px}
+.approach__item-top{margin-bottom:26px}
+.approach__number{color:#aec5d5;font-size:9px}
+.approach__item svg{color:#94ceeF;width:30px;height:30px}
+.approach__item h3{color:#f0f6fa;font-size:19px;font-weight:400;line-height:1.25;margin:0 0 14px}
+.approach__item>p{color:#d0dde7;font-size:12px;line-height:1.8;max-width:none}
+.approach__item:nth-child(1) h3,.approach__item:nth-child(5) h3{font-size:27px;letter-spacing:-.035em}
+.approach__item:nth-child(1)>p,.approach__item:nth-child(5)>p{max-width:490px;font-size:13px}
+.approach__item:nth-child(1) svg,.approach__item:nth-child(5) svg{width:38px;height:38px}
+.approach__item::before{top:auto;bottom:0;left:25px;width:36px;background:#8ac9ec88}
+.approach__item:hover::before{width:80px}
+@media(max-width:1050px){.approach__list{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.approach__item{padding:22px}.approach__item:nth-child(1),.approach__item:nth-child(5){padding:25px}.approach__item:nth-child(5){grid-column:span 1}.approach__item:nth-child(6){grid-column:span 2}.approach__item:nth-child(5) h3{font-size:21px}.approach__item:nth-child(5)>p{font-size:12px}}
+@media(max-width:760px){.approach{padding:65px 6vw}.approach__intro{grid-template-columns:1fr;gap:0}.approach h2{grid-column:1;grid-row:auto;font-size:35px;margin-bottom:24px}.approach__intro>p{grid-column:1;font-size:13px}.approach__list{grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.approach__item:nth-child(1),.approach__item:nth-child(5){grid-column:span 2;padding:24px}.approach__item:nth-child(4),.approach__item:nth-child(6){grid-column:span 1}.approach__item:nth-child(5){grid-row:3}.approach__item:nth-child(4){grid-row:4}.approach__item{padding:20px}.approach__item h3{font-size:17px}.approach__item>p{font-size:11px}.approach__item:nth-child(1) h3,.approach__item:nth-child(5) h3{font-size:25px}.approach__item:nth-child(1)>p,.approach__item:nth-child(5)>p{font-size:12px}.approach__item-top{margin-bottom:20px}}
+@media(max-width:420px){.approach__item-top{float:none;flex-direction:row;margin:0 0 18px;min-width:0;gap:0}.approach__item h3,.approach__item>p{margin-left:0}.approach__item{padding:17px}.approach__item h3{font-size:16px}.approach__item svg{width:26px;height:26px}}
+/* Shared brand accent and header-aligned layout. */
+.approach{padding-left:var(--page-gutter);padding-right:var(--page-gutter)}
+.approach__layout{max-width:none;width:100%}
+.approach h2 span,.approach__title-accent{color:var(--brand-blue)}
+/* Bento cards share the service detail panel's restrained palette. */
+.approach__item,.approach__item:nth-child(1),.approach__item:nth-child(5){background:#172b3ed9;border:1px solid #b6d9ed40;border-radius:18px;box-shadow:inset 0 1px 0 #e6f5ff24,0 16px 40px #00172f22;-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px)}
+.approach__item h3,.approach__item .approach__title-accent{color:#f4f8fc}
+.approach__item>p{color:#c3d0dc}
+.approach__item svg{color:#c3d0dc}
+.approach__number{color:#9eb1c1}
+.approach__item::before{background:#d9edfa40}
+/* Alternate solid and transparent surfaces across the bento layout. */
+.approach__item:nth-child(2),.approach__item:nth-child(4),.approach__item:nth-child(6){background:#b3ccdc16;border-color:#d9efff38;box-shadow:inset 0 1px 0 #ffffff1a,0 8px 25px #00172f0d}
+.approach__item:nth-child(2) h3,.approach__item:nth-child(4) h3,.approach__item:nth-child(6) h3,.approach__item:nth-child(2) .approach__title-accent,.approach__item:nth-child(4) .approach__title-accent,.approach__item:nth-child(6) .approach__title-accent{color:#f4f8fc}
+.approach__item:nth-child(2)>p,.approach__item:nth-child(4)>p,.approach__item:nth-child(6)>p{color:#e0e8ef}

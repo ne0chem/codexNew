@@ -1,0 +1,1242 @@
+.services-orbit {
+  position: relative;
+  height: 750vh;
+  background: #080d15;
+  --gallery-entry: 0;
+}
+.services-orbit__viewport {
+  height: 100svh;
+  min-height: 600px;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(ellipse at 73% 50%, #03558824, transparent 60%);
+}
+.services-orbit__heading {
+  position: absolute;
+  top: 130px;
+  left: 5vw;
+  z-index: 3;
+  pointer-events: none;
+}
+.services-orbit__heading h2 {
+  font-size: clamp(35px, 4vw, 64px);
+  margin-top: 20px;
+}
+.services-orbit__heading em {
+  color: #0385ce;
+  font-style: normal;
+}
+.services-orbit__heading > p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #687f97;
+  margin-top: 20px;
+}
+.services-orbit__scene {
+  position: absolute;
+  inset: 0 0 0 28%;
+  perspective-origin: 50% 50%;
+  transform-style: preserve-3d;
+  z-index: 1;
+}
+.services-orbit__orbit {
+  position: absolute;
+  top: 0;
+  left: 28%;
+  width: 72%;
+  height: 100%;
+  pointer-events: none;
+  opacity: var(--gallery-entry);
+  overflow: visible;
+}
+.services-orbit__orbit path {
+  fill: none;
+  stroke: #0385ce;
+  stroke-width: 1;
+  opacity: 0.5;
+}
+.services-orbit__scene,
+.services-orbit__orbit {
+  transform: translate3d(0, var(--arrival-shift, 0px), 0)
+    scale(var(--arrival-scale, 1));
+  transform-origin: 50% 50%;
+}
+.service-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid #6ab7e050;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #142c43, #0a1829);
+  color: white;
+  overflow: hidden;
+  padding: 0;
+  backface-visibility: hidden;
+  will-change: transform;
+  box-shadow:
+    0 30px 70px #0008,
+    inset 0 1px 0 #ffffff16;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.service-card__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 6%;
+  font-size: clamp(7px, 0.7vw, 11px);
+  letter-spacing: 0.1em;
+  color: #80a9c6;
+  border-bottom: 1px solid #ffffff12;
+}
+.service-card__top > span:last-child {
+  color: #54c3ff;
+}
+.service-card__bottom {
+  padding: 4% 6% 5%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  border-top: 1px solid #ffffff15;
+}
+.service-card__bottom strong {
+  font-size: clamp(10px, 1.15vw, 18px);
+  font-weight: 400;
+  max-width: 65%;
+  line-height: 1.2;
+}
+.service-card__bottom > span {
+  font-size: clamp(8px, 0.7vw, 11px);
+  white-space: nowrap;
+  color: #8bcaf0;
+}
+.service-art {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  gap: 6%;
+  padding: 5% 8%;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 80% 80%, #0385ce33, transparent 65%);
+}
+.service-art__rail {
+  width: 9%;
+  border: 1px solid #ffffff15;
+  border-radius: 4px;
+  padding: 12% 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 8px;
+  background: #ffffff03;
+}
+.service-art__rail i {
+  height: 3px;
+  width: 100%;
+  background: #4a7a9b;
+}
+.service-art__body {
+  flex: 1;
+}
+.service-art__code {
+  font-size: clamp(22px, 3.2vw, 54px);
+  font-family: monospace;
+  color: #33b4f8;
+  letter-spacing: -0.08em;
+  display: block;
+  line-height: 1.1;
+}
+.service-art__lines {
+  margin-top: 6%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.service-art__lines i {
+  height: 3px;
+  background: #c8e9ff30;
+  width: 65%;
+  border-radius: 3px;
+}
+.service-art__lines i:nth-child(2) {
+  width: 45%;
+}
+.service-art__lines i:nth-child(3) {
+  width: 55%;
+}
+.service-art__tiles {
+  display: flex;
+  gap: 6px;
+  margin-top: 7%;
+  height: 25%;
+}
+.service-art__tiles i {
+  width: 25%;
+  background: linear-gradient(135deg, #0385ce70, #0385ce08);
+  border: 1px solid #0385ce50;
+  border-radius: 4px;
+}
+.service-art__badge {
+  position: absolute;
+  right: 6%;
+  top: 15%;
+  writing-mode: vertical-rl;
+  font-size: 7px;
+  letter-spacing: 0.2em;
+  color: #5d95b8;
+}
+.service-art--1 .service-art__body {
+  border: 1px solid #63bdf348;
+  border-radius: 8px;
+  padding: 4%;
+  transform: rotate(-6deg);
+  background: #0385ce0a;
+}
+.service-art--2 .service-art__tiles i:nth-child(2) {
+  transform: translateY(-8px);
+  background: #0385ce;
+}
+.service-art--3 .service-art__body {
+  border: 2px solid #5398c280;
+  border-radius: 15px;
+  padding: 4%;
+  margin-left: 10%;
+  max-width: 60%;
+  transform: rotate(7deg);
+  background: #00172f;
+}
+.services-orbit__info {
+  position: absolute;
+  z-index: 4;
+  left: 5vw;
+  bottom: 12%;
+  width: 26%;
+  max-width: 360px;
+}
+.services-orbit__info > div {
+  will-change: opacity, transform;
+}
+.services-orbit__info .eyebrow {
+  font-size: 8px;
+  color: #389bd5;
+}
+.services-orbit__info h3 {
+  font-size: clamp(25px, 2.8vw, 42px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+.services-orbit__info p {
+  font-size: 13px;
+  line-height: 1.75;
+  color: #8d9fb3;
+}
+.services-orbit__price {
+  border-top: 1px solid #ffffff20;
+  margin-top: 22px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.services-orbit__price strong {
+  font-size: 21px;
+  font-weight: 400;
+}
+.services-orbit__price button {
+  background: none;
+  color: #b5d8ee;
+  border: 0;
+  align-self: flex-start;
+  font-size: 12px;
+  padding: 5px 0;
+}
+.services-orbit__price button span {
+  margin-left: 25px;
+  color: #0385ce;
+}
+.services-orbit__controls {
+  position: absolute;
+  z-index: 5;
+  bottom: 26px;
+  left: 5vw;
+  right: 5vw;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  font-size: 12px;
+}
+.services-orbit__controls > span {
+  font-variant-numeric: tabular-nums;
+}
+.services-orbit__controls i {
+  font-style: normal;
+  color: #61758c;
+}
+.services-orbit__controls button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #46708d;
+  background: #0e1b29;
+  color: white;
+  font-size: 20px;
+}
+.services-orbit__controls button:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+.services-orbit__progress {
+  height: 1px;
+  background: #ffffff15;
+  flex: 1;
+  margin: 0 20px;
+}
+.services-orbit__progress i {
+  display: block;
+  height: 1px;
+  background: #0385ce;
+  transition: width 0.4s;
+}
+.service-dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: #000b;
+  backdrop-filter: blur(12px);
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.service-dialog {
+  position: relative;
+  background: #101f30;
+  border: 1px solid #0385ce60;
+  border-radius: 16px;
+  padding: 45px;
+  max-width: 650px;
+  width: 100%;
+  max-height: 85svh;
+  overflow: auto;
+}
+.service-dialog h2 {
+  font-size: 36px;
+  margin: 25px 0;
+}
+.service-dialog > strong {
+  color: #43b7f7;
+  font-size: 22px;
+  font-weight: 400;
+}
+.service-dialog p {
+  color: #a0b3c8;
+  line-height: 1.8;
+  margin: 25px 0;
+}
+.service-dialog ul {
+  padding-left: 20px;
+  color: #c5d2df;
+  line-height: 1.7;
+  font-size: 14px;
+}
+.service-dialog li + li {
+  margin-top: 12px;
+}
+.service-dialog__close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  border: 0;
+  background: none;
+  color: white;
+  padding: 8px;
+}
+@media (max-width: 760px) {
+  .services-orbit {
+    height: 800vh;
+  }
+  .services-orbit__viewport {
+    min-height: 730px;
+  }
+  .services-orbit__heading {
+    top: 135px;
+    left: 6vw;
+  }
+  .services-orbit__heading h2 {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+  .services-orbit__heading h2 br {
+    display: none;
+  }
+  .services-orbit__heading > p {
+    display: none;
+  }
+  .services-orbit__scene {
+    inset: 170px 0 29%;
+  }
+  .services-orbit__orbit {
+    top: 170px;
+    left: 0;
+    width: 100%;
+    height: calc(71% - 170px);
+  }
+  .services-orbit__info {
+    left: 6vw;
+    bottom: 80px;
+    width: 88%;
+    max-width: none;
+    pointer-events: none;
+  }
+  .services-orbit__info h3 {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  .services-orbit__info p {
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 540px;
+  }
+  .services-orbit__price {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    margin-top: 14px;
+  }
+  .services-orbit__price strong {
+    font-size: 18px;
+  }
+  .services-orbit__price button {
+    pointer-events: auto;
+  }
+  .services-orbit__controls {
+    bottom: 20px;
+  }
+  .service-card__bottom strong {
+    font-size: 12px;
+  }
+  .service-card__bottom > span {
+    font-size: 8px;
+  }
+  .service-art__code {
+    font-size: 28px;
+  }
+  .service-dialog {
+    padding: 35px 25px;
+  }
+  .service-dialog h2 {
+    font-size: 28px;
+  }
+  .services-orbit__info .eyebrow {
+    font-size: 7px;
+  }
+}
+@media (max-height: 760px) and (min-width: 761px) {
+  .services-orbit__heading {
+    top: 115px;
+  }
+  .services-orbit__heading h2 {
+    font-size: 38px;
+  }
+  .services-orbit__heading > p {
+    display: none;
+  }
+  .services-orbit__info {
+    bottom: 13%;
+  }
+  .services-orbit__info h3 {
+    font-size: 28px;
+    margin: 12px 0;
+  }
+  .services-orbit__info p {
+    font-size: 12px;
+  }
+  .services-orbit__price {
+    gap: 10px;
+    margin-top: 14px;
+    padding-top: 14px;
+  }
+}
+.services-orbit {
+  scroll-margin-top: -115px;
+}
+@media (max-width: 760px) {
+  .services-orbit__viewport {
+    min-height: 0;
+  }
+  .services-orbit__heading {
+    top: 118px;
+  }
+  .services-orbit__heading h2 {
+    font-size: 27px;
+  }
+  .services-orbit__scene {
+    inset: 165px 0 38%;
+  }
+  .services-orbit__orbit {
+    top: 165px;
+    height: calc(62% - 165px);
+  }
+  .services-orbit__info {
+    bottom: 78px;
+  }
+  .services-orbit__info h3 {
+    font-size: 23px;
+  }
+  .services-orbit__info p {
+    font-size: 11px;
+  }
+  .services-orbit__price {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .services-orbit__info .eyebrow {
+    display: none;
+  }
+}
+@media (max-height: 650px) and (max-width: 760px) {
+  .services-orbit__heading {
+    top: 110px;
+  }
+  .services-orbit__heading h2 {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+  .services-orbit__heading > .eyebrow {
+    font-size: 8px;
+  }
+  .services-orbit__info p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .services-orbit__info h3 {
+    font-size: 21px;
+  }
+  .services-orbit__info {
+    bottom: 72px;
+  }
+  .services-orbit__controls button {
+    height: 34px;
+    width: 34px;
+  }
+}
+
+/* Empty visual placeholders; service copy and prices stay unchanged. */
+.service-card {
+  background: transparent;
+  box-shadow: none;
+}
+.service-card__empty {
+  flex: 1;
+  min-height: 0;
+}
+.service-card__bottom {
+  background: transparent;
+}
+/* Restrained graphite palette for the services section. */
+.services-orbit {
+  background: #171c22;
+  color: #f0f2f4;
+}
+.services-orbit__viewport {
+  background: #171c22;
+}
+.services-orbit__heading .eyebrow,
+.services-orbit__heading > p,
+.services-orbit__info p {
+  color: #9aa5b1;
+}
+.services-orbit__heading em {
+  color: #f0f2f4;
+}
+.services-orbit__orbit path {
+  stroke: #0385ce;
+  opacity: 0.32;
+}
+.service-card {
+  border-color: #ffffff24;
+  background: transparent;
+  box-shadow: none;
+}
+.service-card__bottom {
+  border-top-color: #ffffff18;
+}
+.service-card__bottom > span {
+  color: #9aa5b1;
+}
+.services-orbit__info .eyebrow {
+  color: #9aa5b1;
+}
+.services-orbit__price {
+  border-top-color: #ffffff1c;
+}
+.services-orbit__price button {
+  color: #f0f2f4;
+}
+.services-orbit__controls i {
+  color: #9aa5b1;
+}
+.services-orbit__controls button {
+  background: transparent;
+  border-color: #ffffff30;
+  color: #f0f2f4;
+}
+.services-orbit__controls button:hover:not(:disabled) {
+  border-color: #0385ce;
+}
+.services-orbit__progress {
+  background: #ffffff18;
+}
+.services-orbit__progress i {
+  background: #0385ce;
+}
+/* Blue ribbon follows the original CodexTech brand palette. */
+.services-orbit {
+  background: #0b121b;
+}
+.services-orbit__viewport {
+  background: #0b121b;
+}
+.services-orbit__ribbon {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(90deg, #0b121b 0%, #0b121bd9 24%, transparent 58%),
+    url("../../assets/services-ribbon.svg");
+  background-position:
+    center,
+    right center;
+  background-size: cover, cover;
+  background-repeat: no-repeat;
+  transform: translateY(calc(var(--journey, 0) * -25px)) scale(1.04);
+  transform-origin: center;
+}
+.services-orbit__heading em {
+  color: #0385ce;
+}
+.services-orbit__price button {
+  color: #38a9e9;
+}
+.service-card {
+  border-color: #a6c9e23b;
+}
+.services-orbit__orbit path {
+  opacity: 0.2;
+}
+@media (max-width: 760px) {
+  .services-orbit__ribbon {
+    background-position:
+      center,
+      60% center;
+    background-size:
+      cover,
+      auto 100%;
+    opacity: 0.7;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .services-orbit__ribbon {
+    transform: none;
+  }
+}
+/* Glass panel for the active service description. */
+.services-orbit__info {
+  width: 29%;
+  max-width: 410px;
+  bottom: 11%;
+}
+.services-orbit__info > div {
+  padding: 28px;
+  border: 1px solid #b9def52b;
+  border-radius: 18px;
+  background: #92c4e00a;
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  backdrop-filter: blur(20px) saturate(120%);
+  box-shadow:
+    inset 0 1px 0 #ffffff14,
+    0 16px 40px #00000024;
+}
+.services-orbit__info .eyebrow {
+  color: #92aabc;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+}
+.services-orbit__info h3 {
+  font-size: clamp(25px, 2.45vw, 38px);
+  line-height: 1.12;
+  letter-spacing: -0.04em;
+  margin: 20px 0 18px;
+  color: #f0f4f7;
+  text-wrap: balance;
+}
+.services-orbit__info p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #a8b6c3;
+  text-wrap: pretty;
+}
+.services-orbit__price {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #c5e4f51c;
+  gap: 18px;
+}
+.services-orbit__price strong {
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: #edf5fa;
+}
+.services-orbit__price button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 10px 14px;
+  border: 1px solid #5cb7ed33;
+  border-radius: 8px;
+  background: #0385ce0d;
+  color: #5bbcf0;
+  font-size: 12px;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.services-orbit__price button span {
+  margin-left: 0;
+  font-size: 16px;
+  color: inherit;
+}
+.services-orbit__price button:hover {
+  background: #0385ce20;
+  border-color: #5cb7ed70;
+}
+@media (max-width: 760px) {
+  .services-orbit__info {
+    left: 5vw;
+    width: 90%;
+    max-width: none;
+    bottom: 74px;
+  }
+  .services-orbit__info > div {
+    padding: 18px 20px;
+    border-radius: 14px;
+  }
+  .services-orbit__info h3 {
+    font-size: 23px;
+    margin: 0 0 10px;
+  }
+  .services-orbit__info p {
+    font-size: 11px;
+    line-height: 1.55;
+  }
+  .services-orbit__price {
+    margin-top: 12px;
+    padding-top: 12px;
+    gap: 12px;
+  }
+  .services-orbit__price strong {
+    font-size: 19px;
+  }
+  .services-orbit__price button {
+    padding: 7px 10px;
+    font-size: 11px;
+    align-self: center;
+  }
+  .services-orbit__scene {
+    bottom: 43%;
+  }
+  .services-orbit__orbit {
+    height: calc(57% - 165px);
+  }
+}
+@media (max-height: 760px) and (min-width: 761px) {
+  .services-orbit__info > div {
+    padding: 20px;
+  }
+  .services-orbit__info h3 {
+    font-size: 27px;
+    margin: 12px 0;
+  }
+  .services-orbit__info p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .services-orbit__price {
+    margin-top: 16px;
+    padding-top: 14px;
+    gap: 12px;
+  }
+  .services-orbit__price strong {
+    font-size: 21px;
+  }
+}
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .services-orbit__info > div {
+    background: #12202df2;
+  }
+}
+/* Keep the composition quiet as service cards gain content. */
+.services-orbit__ribbon {
+  opacity: 0.16;
+  filter: saturate(0.65);
+}
+.services-orbit__heading h2.eyebrow {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  color: #8d9ba8;
+}
+.services-orbit__orbit path {
+  opacity: 0.12;
+}
+@media (max-width: 760px) {
+  .services-orbit__ribbon {
+    opacity: 0.12;
+  }
+  .services-orbit__heading h2.eyebrow {
+    font-size: 9px;
+  }
+}
+/* Small brand-blue accents; keep the background restrained. */
+.services-orbit {
+  --service-brand: #0385ce;
+  --service-brand-light: #46b5ef;
+}
+.services-orbit__heading h2.eyebrow {
+  color: var(--service-brand-light);
+}
+.services-orbit__heading h2.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: var(--service-brand);
+}
+.services-orbit__info > div {
+  border-color: #0385ce45;
+  box-shadow:
+    inset 2px 0 0 #0385ce99,
+    inset 0 1px 0 #ffffff14,
+    0 16px 40px #00000024;
+}
+.services-orbit__info .eyebrow {
+  color: var(--service-brand-light);
+}
+.services-orbit__price button {
+  color: var(--service-brand-light);
+  border-color: #0385ce65;
+  background: #0385ce14;
+}
+.service-card--active {
+  border-color: #0385ce80;
+}
+.service-card--active .service-card__bottom {
+  border-top-color: #0385ce40;
+}
+.service-card--active .service-card__bottom > span {
+  color: #65bce9;
+}
+.services-orbit__controls > span {
+  color: var(--service-brand-light);
+}
+.services-orbit__controls button:not(:disabled) {
+  border-color: #0385ce70;
+  color: var(--service-brand-light);
+}
+.services-orbit__progress i {
+  background: var(--service-brand);
+}
+/* Plain neutral backdrop; no decorative ribbons or orbit line. */
+.services-orbit,
+.services-orbit__viewport {
+  background: #16191e;
+}
+.services-orbit__orbit {
+  display: none;
+}
+.services-orbit__heading h2.eyebrow {
+  color: #94a0ad;
+}
+.services-orbit__heading h2.eyebrow::before {
+  display: none;
+}
+.services-orbit__info > div {
+  border-color: #ffffff20;
+  box-shadow:
+    inset 0 1px 0 #ffffff0d,
+    0 12px 32px #00000018;
+  background: #ffffff03;
+}
+.services-orbit__info .eyebrow {
+  color: #94a0ad;
+}
+.service-card,
+.service-card--active {
+  border-color: #ffffff24;
+  box-shadow: none;
+}
+.service-card--active .service-card__bottom {
+  border-top-color: #ffffff18;
+}
+.service-card--active .service-card__bottom > span {
+  color: #9aa5b1;
+}
+.services-orbit__controls > span {
+  color: #d6dde5;
+}
+.services-orbit__controls button:not(:disabled) {
+  border-color: #ffffff30;
+  color: #d6dde5;
+}
+/* Light cool palette for the services section. */
+.services-orbit,
+.services-orbit__viewport {
+  background: #e9eff3;
+  color: #00172f;
+}
+.services-orbit__heading h2.eyebrow {
+  color: #5c7385;
+}
+.service-card,
+.service-card--active {
+  color: #00172f;
+  border-color: #00172f29;
+  background: transparent;
+  box-shadow: none;
+}
+.service-card__bottom,
+.service-card--active .service-card__bottom {
+  border-top-color: #00172f1c;
+}
+.service-card__bottom > span,
+.service-card--active .service-card__bottom > span {
+  color: #536b7d;
+}
+.services-orbit__info > div {
+  background: #ffffff66;
+  border-color: #ffffffc2;
+  box-shadow:
+    inset 0 1px 0 #ffffffcc,
+    0 12px 36px #00172f08;
+}
+.services-orbit__info .eyebrow {
+  color: #527084;
+}
+.services-orbit__info h3 {
+  color: #00172f;
+}
+.services-orbit__info p {
+  color: #536779;
+}
+.services-orbit__price {
+  border-top-color: #00172f1c;
+}
+.services-orbit__price strong {
+  color: #00172f;
+}
+.services-orbit__price button {
+  color: #006ba7;
+  border-color: #0385ce40;
+  background: #0385ce09;
+}
+.services-orbit__price button:hover {
+  background: #0385ce16;
+  border-color: #0385ce80;
+}
+.services-orbit__controls > span {
+  color: #00172f;
+}
+.services-orbit__controls i {
+  color: #687f90;
+}
+.services-orbit__controls button,
+.services-orbit__controls button:not(:disabled) {
+  background: #ffffff50;
+  border-color: #00172f26;
+  color: #00172f;
+}
+.services-orbit__controls button:hover:not(:disabled) {
+  background: #ffffffa0;
+  border-color: #0385ce80;
+}
+.services-orbit__progress {
+  background: #00172f1c;
+}
+.services-orbit__progress i {
+  background: #0385ce;
+}
+.service-dialog {
+  background: #edf3f7;
+  border-color: #00172f26;
+  color: #00172f;
+  box-shadow: 0 24px 80px #00172f24;
+}
+.service-dialog h2,
+.service-dialog__close {
+  color: #00172f;
+}
+.service-dialog > strong {
+  color: #006ba7;
+}
+.service-dialog p {
+  color: #536779;
+}
+.service-dialog ul {
+  color: #304c60;
+}
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .services-orbit__info > div {
+    background: #f4f7fa;
+  }
+}
+/* Muted blue-grey, with less white in the glass panel. */
+.services-orbit,
+.services-orbit__viewport {
+  background: #85929bda;
+}
+.services-orbit__info > div {
+  background: #d6e2ea40;
+  border-color: #eff7fc66;
+  box-shadow:
+    inset 0 1px 0 #edf7fd66,
+    0 12px 36px #00172f0a;
+}
+.services-orbit__controls button,
+.services-orbit__controls button:not(:disabled) {
+  background: #d6e2ea30;
+}
+@supports not (
+  (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))
+) {
+  .services-orbit__info > div {
+    background: #cbd9e3;
+  }
+}
+/* Decorative robot schematic, behind all service content. */
+.services-orbit__robot{position:absolute;z-index:0;right:-5%;top:6%;height:110%;width:min(70vw,1050px);color:#0385ce;opacity:.36;pointer-events:none;user-select:none;transform:translateY(calc(var(--journey,0) * -28px));mask-image:linear-gradient(90deg,transparent,#000 23%,#000 80%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 23%,#000 80%,transparent)}
+@media(max-width:760px){.services-orbit__robot{width:115vw;height:85%;right:-30%;top:9%;opacity:.24}}
+@media(prefers-reduced-motion:reduce){.services-orbit__robot{transform:none}}
+/* Rendered robot replaces the schematic; existing background stays intact. */
+.services-orbit__robot-image{position:absolute;z-index:0;right:-2%;bottom:-13%;height:105%;width:58%;object-fit:contain;object-position:right bottom;pointer-events:none;user-select:none;opacity:.48;mask-image:linear-gradient(0deg,transparent 3%,#000 29%,#000 85%,transparent 100%);-webkit-mask-image:linear-gradient(0deg,transparent 3%,#000 29%,#000 85%,transparent 100%)}
+@media(max-width:760px){.services-orbit__robot-image{width:100%;height:75%;right:-28%;bottom:10%;opacity:.3}}
+/* Match the service UI to the titanium and blue robot render. */
+.services-orbit__robot-image{opacity:1;mask-image:linear-gradient(0deg,transparent 2%,#000 24%,#000 100%);-webkit-mask-image:linear-gradient(0deg,transparent 2%,#000 24%,#000 100%)}
+.services-orbit__heading h2.eyebrow{color:#163f59;letter-spacing:.18em}
+.services-orbit__info>div{background:#dce8f078;border-color:#edf8ff99;-webkit-backdrop-filter:blur(24px) saturate(115%);backdrop-filter:blur(24px) saturate(115%);box-shadow:inset 0 1px 0 #ffffffb3,0 18px 46px #00172f12}
+.services-orbit__info .eyebrow{color:#006ca5}
+.services-orbit__info h3{color:#00172f}
+.services-orbit__info p{color:#304d62}
+.services-orbit__price{border-top-color:#315e7b26}
+.services-orbit__price button{background:#037fbd;border-color:#0385ce;color:#fff;box-shadow:inset 0 1px 0 #ffffff30}
+.services-orbit__price button:hover{background:#006da8;border-color:#006da8}
+.service-card,.service-card--active{border-color:#c4dce970;box-shadow:inset 0 1px 0 #ffffff24;background:transparent}
+.service-card--active{border-color:#0385ce88}
+.service-card__bottom,.service-card--active .service-card__bottom{background:#dae7ef70;border-top-color:#c6e2f070;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.service-card__bottom strong{color:#00172f}
+.service-card__bottom>span,.service-card--active .service-card__bottom>span{color:#155578}
+.services-orbit__controls button,.services-orbit__controls button:not(:disabled){background:#d7e5ee66;border-color:#edf8ff80;color:#064d75;box-shadow:inset 0 1px 0 #ffffff50}
+.services-orbit__controls button:hover:not(:disabled){background:#0385ce;color:white;border-color:#0385ce}
+@media(max-width:760px){.services-orbit__robot-image{opacity:1}.services-orbit__info>div{background:#dce8f0c9}}
+/* Consolidate the service copy inside the moving cards. */
+.services-orbit__scene{left:0}
+.service-card,.service-card--active{cursor:default;background:#dce8f0a6;-webkit-backdrop-filter:blur(22px) saturate(110%);backdrop-filter:blur(22px) saturate(110%);border-color:#edf8ff99;box-shadow:inset 0 1px 0 #ffffff80,0 16px 40px #00172f16}
+.service-card__select{position:absolute;inset:0;border:0;background:none;z-index:1;cursor:pointer}
+.service-card--active .service-card__select{pointer-events:none}
+.service-card__details{padding:clamp(16px,2vw,30px);display:flex;flex-direction:column;justify-content:center;height:100%;position:relative;pointer-events:none;text-align:left}
+.service-card__label{font-size:clamp(7px,.65vw,10px);letter-spacing:.13em;color:#006ca5}
+.service-card__details h3{font-size:clamp(19px,2.15vw,34px);line-height:1.08;letter-spacing:-.035em;font-weight:400;margin:14px 0;color:#00172f}
+.service-card__details p{font-size:clamp(10px,.9vw,14px);line-height:1.6;color:#304d62}
+.service-card__price{margin-top:18px;padding-top:16px;border-top:1px solid #315e7b26;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.service-card__price strong{font-size:clamp(14px,1.35vw,21px);font-weight:500;color:#00172f;white-space:nowrap}
+.service-card__price button{position:relative;z-index:2;pointer-events:auto;border:1px solid #0385ce;background:#037fbd;color:white;border-radius:7px;padding:9px 12px;font-size:clamp(9px,.75vw,12px);white-space:nowrap}
+.service-card__price button span{margin-left:12px}
+.service-card:not(.service-card--active) .service-card__details p,.service-card:not(.service-card--active) .service-card__label,.service-card:not(.service-card--active) .service-card__price button{visibility:hidden}
+@media(max-width:760px){.services-orbit__scene{inset:130px 0 65px}.service-card__details{padding:16px}.service-card__details h3{font-size:23px;margin:12px 0}.service-card__details p{font-size:11px;line-height:1.5}.service-card__price{margin-top:14px;padding-top:12px;flex-wrap:wrap}.service-card__price strong{font-size:17px}.service-card__price button{font-size:10px;padding:8px 10px}.service-card__label{font-size:7px}}
+/* Smaller cards with compact content. */
+.service-card__details{padding:20px;justify-content:center}
+.service-card__details h3{font-size:clamp(18px,1.65vw,27px);margin:10px 0 12px;line-height:1.12}
+.service-card__details p{font-size:clamp(10px,.8vw,13px);line-height:1.5}
+.service-card__label{font-size:8px;letter-spacing:.1em}
+.service-card__price{margin-top:14px;padding-top:12px}
+.service-card__price strong{font-size:clamp(14px,1.05vw,18px)}
+.service-card__price button{padding:8px 10px;font-size:10px}
+@media(max-width:760px){.service-card__details{padding:16px}.service-card__details h3{font-size:20px}.service-card__details p{font-size:11px}.service-card__price{margin-top:12px;padding-top:10px}.service-card__price strong{font-size:16px}}
+/* Same translucent glass treatment as the header. */
+.service-card,.service-card--active{background:#b3ccdc4d;border:1px solid #d9efff30;border-radius:12px;-webkit-backdrop-filter:blur(22px) saturate(110%);backdrop-filter:blur(22px) saturate(110%);box-shadow:0 6px 24px #00000018;will-change:auto}
+.service-card__details{filter:none;opacity:1}
+.service-card__details h3,.service-card__price strong{color:#00172f}
+.service-card__details p{color:#233f54}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.service-card{background:#b3ccdcc9}}
+/* Render readable type in a flat layer, without perspective resampling. */
+.services-orbit__scene{transform-style:flat;perspective:none!important;transform:none}
+.service-card{backface-visibility:visible}
+.service-card__details{padding:24px}
+.service-card__details h3{font-size:26px;font-weight:500;letter-spacing:-.025em;line-height:1.18;margin:12px 0 16px}
+.service-card__details p{font-size:14px;line-height:1.65;font-weight:400;color:#203c50}
+.service-card__label{font-size:9px;line-height:1.4;font-weight:500;letter-spacing:.09em}
+.service-card__price strong{font-size:20px;font-weight:500;letter-spacing:-.015em}
+.service-card__price button{font-size:12px;font-weight:500}
+@media(max-width:760px){.service-card__details{padding:18px}.service-card__details h3{font-size:21px;margin:10px 0 12px}.service-card__details p{font-size:12px;line-height:1.55}.service-card__price strong{font-size:17px}.service-card__price button{font-size:11px}.service-card__label{font-size:8px}}
+/* Reference-inspired smoked glass, with readable light type. */
+.services-orbit__viewport{background:radial-gradient(ellipse at 90% 15%,#b3c9db99,transparent 58%),#354453}
+.services-orbit{background:#354453}
+.services-orbit__heading h2.eyebrow{color:#9bb5cc}
+.service-card,.service-card--active{background:#182b4270;border:1px solid #b7d1e74d;-webkit-backdrop-filter:blur(22px) saturate(110%);backdrop-filter:blur(22px) saturate(110%);box-shadow:inset 0 1px 0 #ffffff30,0 14px 35px #07121e26;border-radius:16px}
+.service-card--active{border-color:#8cc8ff;box-shadow:inset 0 1px 0 #ffffff66,0 0 22px #0385ce1c,0 18px 42px #07121e33}
+.service-card__label{color:#66b7ff}
+.service-card__details h3,.service-card__price strong{color:#f1f6fc;font-weight:400}
+.service-card__details p{color:#c4cfdd}
+.service-card__price{border-top-color:#b7d1e738}
+.service-card__cost{display:flex;flex-direction:column;gap:7px}
+.service-card__cost>span{font-size:10px;line-height:1.4;color:#aebdce}
+.service-card__price button{background:#1879ed;border:1px solid #69baff80;color:#fff;border-radius:9px;padding:11px 15px;box-shadow:inset 0 1px 0 #ffffff26;font-weight:500}
+.service-card__price button:hover{background:#328cf7}
+.service-card:not(.service-card--active){background:#75899c38;border-color:#b7d1e738}
+.service-card:not(.service-card--active) .service-card__cost>span{visibility:hidden}
+.services-orbit__controls>span,.services-orbit__controls i{color:#c5d3e2}
+.services-orbit__controls button,.services-orbit__controls button:not(:disabled){background:#c7dced26;border-color:#dcecff66;color:#f1f6fc}
+.services-orbit__progress{background:#c7dced30}
+.services-orbit__progress i{background:#49a7ff}
+@media(max-width:760px){.service-card__price button{padding:8px 11px}.service-card__cost>span{font-size:9px}}
+/* Refined smoked glass: quieter surfaces and stronger type hierarchy. */
+.services-orbit,.services-orbit__viewport{background:#687984}
+.service-card,.service-card--active{background:#142638a6;border:1px solid #d4e5f23b;border-radius:18px;box-shadow:inset 0 1px 0 #ffffff24,0 16px 42px #0a17262b;-webkit-backdrop-filter:blur(24px) saturate(105%);backdrop-filter:blur(24px) saturate(105%)}
+.service-card--active{border-color:#c8e4f578;box-shadow:inset 0 1px 0 #ffffff38,0 18px 45px #0a172633}
+.service-card__details{padding:28px;justify-content:flex-start}
+.service-card__label{color:#92bad3;font-size:9px;letter-spacing:.13em}
+.service-card__details h3{font-size:28px;line-height:1.12;letter-spacing:-.035em;font-weight:400;margin:18px 0 16px;max-width:95%;text-wrap:balance}
+.service-card__details p{font-size:13px;line-height:1.7;color:#bbc9d5;max-width:48ch}
+.service-card__price{margin-top:auto;padding-top:17px;border-top:1px solid #dae9f21c;gap:18px}
+.service-card__cost>span{font-size:9px;color:#94a8ba}
+.service-card__cost strong{font-size:21px;letter-spacing:-.02em}
+.service-card__price button{background:#afd8f00c;color:#e2f2fc;border:1px solid #badbee38;border-radius:8px;padding:11px 14px;font-size:11px;box-shadow:none;transition:background .2s,border-color .2s}
+.service-card__price button span{color:#6ec4f4;margin-left:18px}
+.service-card__price button:hover{background:#0385ce26;border-color:#72b6df80}
+.service-card:not(.service-card--active){background:#334b5c38;border-color:#e0edf324;box-shadow:inset 0 1px 0 #ffffff12;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.service-card:not(.service-card--active) .service-card__details{justify-content:center}
+.service-card:not(.service-card--active) .service-card__details h3{color:#d2dee7;font-size:23px}
+.service-card:not(.service-card--active) .service-card__price{margin-top:16px}
+.service-card:not(.service-card--active) .service-card__cost strong{color:#b8c9d6;font-size:17px}
+.services-orbit__heading h2.eyebrow{color:#273f50}
+.services-orbit__controls button,.services-orbit__controls button:not(:disabled){background:#d5e7f012;border-color:#e2f2fc40;box-shadow:none}
+.services-orbit__progress i{background:#8fc7e6}
+@media(max-width:760px){.service-card__details{padding:18px}.service-card__details h3{font-size:22px;margin:12px 0}.service-card__details p{font-size:12px;line-height:1.55}.service-card__price{padding-top:12px;gap:10px}.service-card__cost strong{font-size:18px}.service-card__price button{font-size:10px;padding:9px 11px}.service-card:not(.service-card--active) .service-card__details h3{font-size:19px}}
+/* Compact proportions and restrained CodexTech blue accents. */
+.service-card__details{padding:22px;justify-content:center}
+.service-card__details h3{font-size:25px;margin:12px 0;line-height:1.14}
+.service-card__details p{font-size:12px;line-height:1.6}
+.service-card__label{color:#55b6ed;font-size:8px}
+.service-card__price{margin-top:18px;padding-top:14px}
+.service-card__cost strong{font-size:19px}
+.service-card__price button{background:#0385ce;border-color:#0385ce;color:#fff;padding:10px 13px;font-size:11px}
+.service-card__price button span{color:#fff;margin-left:14px}
+.service-card__price button:hover{background:#0796e5;border-color:#0796e5}
+.service-card:not(.service-card--active) .service-card__details h3{font-size:21px}
+.services-orbit__heading h2.eyebrow{color:#005e93}
+.services-orbit__progress i{background:#0385ce}
+@media(max-width:760px){.service-card__details{padding:16px}.service-card__details h3{font-size:20px;margin:10px 0}.service-card__details p{font-size:11px;line-height:1.5}.service-card__price{margin-top:12px;padding-top:10px}.service-card__cost strong{font-size:16px}.service-card__price button{padding:8px 10px;font-size:10px}}
+/* Subtle robot image within the glass cards. */
+.service-card{isolation:isolate}
+.service-card__robot{position:absolute;z-index:-1;right:-8%;bottom:-30%;height:140%;width:65%;object-fit:contain;object-position:right bottom;opacity:.18;pointer-events:none;user-select:none;mask-image:linear-gradient(90deg,transparent 0%,#000 65%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 65%)}
+.service-card--active .service-card__robot{opacity:.24}
+.service-card__details h3{margin-top:0}
+.service-card__details p{color:#d1dce5}
+@media(max-width:760px){.service-card__robot{opacity:.12}.service-card--active .service-card__robot{opacity:.16}}
+/* Independent sculptural artwork for service cards. */
+.service-card__art{position:absolute;z-index:-1;right:-12%;bottom:-17%;height:115%;width:75%;object-fit:contain;opacity:.18;pointer-events:none;user-select:none;mask-image:linear-gradient(90deg,transparent 0%,#000 68%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 68%)}
+.service-card--active .service-card__art{opacity:.32}
+@media(max-width:760px){.service-card--active .service-card__art{opacity:.22}}
+/* A sculptural chain follows the same projected spiral as the cards. */
+.services-orbit__chain{display:block;left:0;top:0;width:100%;height:100%;z-index:0;transform:none;opacity:1;overflow:visible;pointer-events:none}
+.services-orbit__chain path{stroke:#8bc5e5;stroke-width:1;opacity:.18}
+.services-orbit__chain image{pointer-events:none}
+@media(max-width:760px){.services-orbit__chain{left:0;top:130px;width:100%;height:calc(100% - 195px)}}
+/* Straight sculptural axis; cards orbit around it at different depths. */
+.services-orbit__axis{position:absolute;left:50%;top:-15%;height:130%;width:54px;margin-left:-27px;z-index:100;border-radius:27px;background:linear-gradient(90deg,#122130 0%,#536d81 13%,#c2d4df 29%,#49697f 43%,#102333 66%,#0385ce 88%,#193a50 96%);border:1px solid #c4e8ff60;box-shadow:inset 5px 0 12px #d4efff24,inset -7px 0 12px #00172f99,8px 0 25px #00172f26;pointer-events:none;mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(transparent,#000 12%,#000 88%,transparent)}
+.services-orbit__axis>div{position:absolute;inset:0;border-radius:inherit;background:repeating-linear-gradient(0deg,transparent 0px,transparent 70px,#00172f70 71px,#b0d8ee60 73px,transparent 75px);background-position:0 calc(var(--journey,0) * 220px)}
+@media(max-width:760px){.services-orbit__axis{width:34px;margin-left:-17px}}
+/* Wide transparent reactor column with a structured interior. */
+.services-orbit__axis{width:146px;margin-left:-73px;border-radius:65px;background:linear-gradient(90deg,#081828a6,#4c799544 18%,#0c233388 48%,#5fa0c12e 80%,#08182899);border:1px solid #b2e0f56b;box-shadow:inset 8px 0 18px #c0e9ff24,inset -10px 0 20px #00132399,10px 0 32px #00172f33;overflow:hidden}
+.services-orbit__axis>div{border-radius:0;background:none;background-position:initial}
+.services-orbit__axis .services-orbit__axis-core{inset:0 43%;background:linear-gradient(90deg,#0066a7,#9be6ff 48%,#0285cb);box-shadow:0 0 18px #0385ce88,0 0 45px #0385ce26}
+.services-orbit__axis .services-orbit__axis-rail{inset:0 auto 0 21%;width:7px;background:linear-gradient(90deg,#173248,#9bbccc,#263f50);box-shadow:2px 0 5px #0005}
+.services-orbit__axis .services-orbit__axis-rail--right{left:auto;right:21%}
+.services-orbit__axis .services-orbit__axis-modules{inset:-90px 0;display:flex;flex-direction:column;justify-content:space-around;transform:translateY(calc(var(--journey,0) * 80px))}
+.axis-module{position:relative;height:65px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:0 12px}
+.axis-module::before,.axis-module::after{content:'';position:absolute;left:2%;right:2%;height:12px;border-radius:50%;border:1px solid #c6edff80;background:linear-gradient(0deg,#0a1c2e,#6a91a8 55%,#bdd7e4 70%,#233e53);box-shadow:0 4px 7px #00101f99;top:0}
+.axis-module::after{top:auto;bottom:0;height:8px;opacity:.75}
+.axis-module>i{width:29px;height:34px;display:block;border:1px solid #b7d5e74a;border-radius:5px;background:linear-gradient(120deg,#9db5c4,#213c51 48%,#091b2b);box-shadow:inset 0 1px 0 #e3f7ff55,2px 4px 6px #00101f88;transform:skewY(-12deg)}
+.axis-module>i:last-child{transform:skewY(12deg)}
+.axis-module>span{height:21px;width:27px;border:1px solid #83d9ff99;background:#0a83c640;border-radius:4px;box-shadow:0 0 12px #039cf24d}
+.services-orbit__axis .services-orbit__axis-shell{inset:0;background:linear-gradient(90deg,transparent 4%,#e1f5ff30 8%,transparent 14%,transparent 73%,#87c4e22b 87%,transparent 93%);border-radius:inherit;box-shadow:inset 1px 0 0 #def5ff80,inset -2px 0 0 #8acfff60}
+@media(max-width:760px){.services-orbit__axis{width:94px;margin-left:-47px}.axis-module{padding:0 7px;height:56px}.axis-module>i{width:20px;height:28px}.axis-module>span{width:19px}}
+/* Fine guide following the exact projected path of the cards. */
+.services-orbit__guide{position:absolute;inset:0;width:100%;height:100%;z-index:0;overflow:visible;pointer-events:none;opacity:var(--gallery-entry,1)}
+.services-orbit__guide path{fill:none;stroke:#72bcea;stroke-width:1;stroke-opacity:.48;vector-effect:non-scaling-stroke}
+@media(max-width:760px){.services-orbit__guide{top:130px;height:calc(100% - 195px)}}
+/* Service-specific interface sketches and concise capabilities. */
+.service-card__intro{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:12px}
+.service-card__intro h3{margin:0;flex:1;max-width:none}
+.service-sketch{width:104px;height:64px;flex-shrink:0;stroke:#a2bfd0;stroke-width:1;opacity:.85}
+.service-sketch__frame{fill:#051b2b24;stroke:#96b6cc70}
+.service-sketch__accent{fill:#0385ce30;stroke:#4bb5ef}
+.service-sketch__signal{stroke:#4bb5ef;stroke-width:1.5}
+.service-card__highlights{display:flex;flex-wrap:wrap;gap:6px 12px;list-style:none;margin:12px 0 0;padding:0;color:#b8d6e8;font-size:10px;line-height:1.5}
+.service-card__highlights li::before{content:'';display:inline-block;width:3px;height:3px;border-radius:50%;background:#0385ce;vertical-align:middle;margin-right:6px}
+.service-card__price{margin-top:14px;padding-top:12px}
+.service-card:not(.service-card--active) .service-sketch,.service-card:not(.service-card--active) .service-card__highlights{display:none}
+@media(max-width:760px){.service-sketch{width:78px;height:50px}.service-card__intro{gap:10px;margin-bottom:10px}.service-card__highlights{font-size:9px;gap:4px 9px;margin-top:10px}.service-card__price{margin-top:10px;padding-top:10px}}
+/* Image-led carousel, with service information in the lower left. */
+.service-card--image,.service-card--image.service-card--active{padding:0;cursor:pointer;overflow:hidden;background:#233c4e;border:1px solid #d9edf75e;box-shadow:0 14px 35px #00172f26}
+.service-card__cover{display:block;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.services-orbit__info{left:4vw;bottom:12%;width:27%;max-width:390px;z-index:4}
+.services-orbit__info>div{padding:24px;background:#172b3e80;border:1px solid #c6e1f036;border-radius:16px;box-shadow:inset 0 1px 0 #ffffff20,0 12px 30px #00172f18}
+.services-orbit__info h3{color:#f0f5fa;font-size:29px;line-height:1.12;margin:0 0 16px;font-weight:400}
+.services-orbit__info p{color:#c4d2df;font-size:13px;line-height:1.7}
+.services-orbit__price{margin-top:20px;padding-top:16px;border-top-color:#d5e8f224;gap:16px}
+.services-orbit__price strong{color:#f0f5fa;font-size:21px}
+.services-orbit__price button{background:#0385ce;color:white;border-color:#0385ce}
+@media(max-width:760px){.services-orbit__info{left:5vw;bottom:75px;width:90%;max-width:none}.services-orbit__info>div{padding:18px}.services-orbit__info h3{font-size:23px;margin-bottom:10px}.services-orbit__info p{font-size:11px;line-height:1.5}.services-orbit__price{margin-top:12px;padding-top:12px}.services-orbit__price strong{font-size:18px}.services-orbit__scene{inset:135px 0 40%}.services-orbit__guide{top:135px;height:calc(60% - 135px)}}
+/* Full-resolution imagery, without glass filtering on image cards. */
+.service-card--image,.service-card--image.service-card--active,.service-card--image:not(.service-card--active){-webkit-backdrop-filter:none;backdrop-filter:none;filter:none}
+.service-card__cover{filter:none;opacity:1;image-rendering:auto;object-position:center}
+/* High-contrast service information with a clear price/action row. */
+.services-orbit__info{max-width:410px;width:28%;bottom:12%}
+.services-orbit__info>div{padding:28px;background:#172b3ed9;border:1px solid #b6d9ed40;border-radius:18px;box-shadow:inset 0 1px 0 #e6f5ff24,0 16px 40px #00172f22;-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px)}
+.services-orbit__info h3{font-size:28px;line-height:1.15;letter-spacing:-.035em;font-weight:500;color:#f4f8fc;margin:0 0 18px;text-wrap:balance}
+.services-orbit__info p{font-size:14px;line-height:1.75;color:#c3d0dc}
+.services-orbit__price{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:16px;margin-top:24px;padding-top:21px;border-top:1px solid #d9edfa26}
+.services-orbit__price strong{font-size:22px;line-height:1.25;color:#f4f8fc;font-weight:500;letter-spacing:-.02em}
+.services-orbit__price button{align-self:auto;display:inline-flex;align-items:center;justify-content:center;gap:20px;flex-shrink:0;border-radius:8px;background:#0385ce;border:1px solid #41b4f044;color:white;padding:12px 15px;font-size:12px;font-weight:500;box-shadow:inset 0 1px 0 #ffffff1f}
+.services-orbit__price button span{margin:0;color:inherit;font-size:16px}
+.services-orbit__price button:hover{background:#0698e8;border-color:#69caff80}
+@media(max-width:1050px) and (min-width:761px){.services-orbit__info>div{padding:22px}.services-orbit__info h3{font-size:25px}.services-orbit__price{flex-wrap:wrap}.services-orbit__price strong{font-size:20px}}
+@media(max-width:760px){.services-orbit__info{width:90%;max-width:none;bottom:75px}.services-orbit__info>div{padding:20px;border-radius:14px}.services-orbit__info h3{font-size:24px;margin-bottom:12px}.services-orbit__info p{font-size:12px;line-height:1.6}.services-orbit__price{margin-top:16px;padding-top:14px;gap:12px}.services-orbit__price strong{font-size:20px}.services-orbit__price button{padding:10px 13px;font-size:11px;gap:14px}}
+/* Align the button label and a true vector icon on the same center. */
+.services-orbit__price button{height:44px;min-width:132px;padding:0 16px;gap:16px;line-height:1;display:inline-flex;align-items:center;justify-content:center;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:500;letter-spacing:0}
+.services-orbit__price button .service-details-label{display:block;margin:0;font-size:13px;line-height:1;white-space:nowrap}
+.services-orbit__price button svg{display:block;width:16px;height:16px;flex:0 0 16px}
+@media(max-width:760px){.services-orbit__price button{height:42px;min-width:124px;padding:0 14px;gap:14px}}
+/* Keep the services content on the same page grid. */
+.services-orbit__heading,.services-orbit__info{left:var(--page-gutter)}
+.services-orbit__controls{left:var(--page-gutter);right:var(--page-gutter)}
+@media(max-width:760px){.services-orbit__info{width:calc(100% - var(--page-gutter) * 2)}}
